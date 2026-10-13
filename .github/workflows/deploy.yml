@@ -32,7 +32,9 @@ jobs:
 
       # Instala as dependências declaradas no pyproject.toml
       - name: Install dependencies
-        run: uv pip install .
+        run: |
+          uv venv --allow-existing
+          uv pip install .
 
       - name: Setup Pages
         uses: actions/configure-pages@v6.0.0
