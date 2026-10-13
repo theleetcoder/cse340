@@ -35,13 +35,13 @@ jobs:
         run: uv pip install . --system
 
       - name: Setup Pages
-        uses: actions/configure-pages@v5
+        uses: actions/configure-pages
 
       - name: Build site
         run: uv run mkdocs build
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact
         with:
           path: ./site
 
